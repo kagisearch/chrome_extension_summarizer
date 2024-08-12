@@ -1,0 +1,54 @@
+html,
+body {
+  width: 500px;
+  background-color: transparent;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 16px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.btn {
+  background-color: #ffb319;
+  border: 1px solid #ffb319;
+  color: #191919;
+  border-radius: 5px;
+  height: 32px;
+  font-size: 0.9375rem;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+.btn:hover {
+  background-color: #f7a808;
+  border: 1px solid #d9950d;
+}
+
+.container {
+  margin-top: 10px;
+  width: 100%;
+  padding: 0px 10px 10px 10px;
+}
+
+.api_section {
+  display: flex;
+  flex-direction: column;
+}
+
+.setting_row {
+  margin-top: 10px;
+  padding: 0;
+  display: flex;
+  text-align: left;
+  align-items: center;
+}
+
+.setting_row > div {
+  margin-right: 10px;
+}

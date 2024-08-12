@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Kagi Summarizer",
+  "version": "1.0.0",
+  "description": "Summarize pages with Kagi Summarizer",
+  "background": {
+    "service_worker": "service_worker.js",
+    "type": "module"
+  },
+  "icons": {
+    "16": "icons/icon_16px.png",
+    "32": "icons/icon_32px.png",
+    "48": "icons/icon_48px.png",
+    "180": "icons/icon_180px.png"
+  },
+  "action": {
+    "default_icon": "icons/icon_32px.png",
+    "default_title": "Kagi Summarizer",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "cookies",
+    "contextMenus",
+    "storage"
+  ],
+  "optional_permissions": ["activeTab"],
+  "host_permissions": ["https://kagi.com/*"],
+  "commands": {
+    "summarize-active-page": {
+      "description": "Summarize the currently active page"
+    }
+  }
+}
