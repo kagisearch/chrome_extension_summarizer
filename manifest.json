@@ -19,7 +19,6 @@
     "default_popup": "popup.html"
   },
   "permissions": [
-    "cookies",
     "contextMenus",
     "storage"
   ],
