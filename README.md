@@ -2,7 +2,7 @@
 
 This extension allows the usage of Kagi Universal Summarizer to summarize pages on the go.
 
-Install this extension in the Chrome Web Store (TODO: pending upload.)
+Install this extension in the [Chrome Web Store](https://chromewebstore.google.com/detail/kagi-summarizer/dpaefegpjhgeplnkomgbcmmlffkijbgp)
 
 Looking for our Chrome extension to set your default search engine or search in incognito? [Click here](https://github.com/kagisearch/chrome_extension_basic)
 
