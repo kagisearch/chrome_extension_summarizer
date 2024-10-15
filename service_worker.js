@@ -19,7 +19,7 @@ async function getSettings() {
 async function saveSettings(options) {
   const engine = options?.engine || "cecil";
   const summary_type = options?.summary_type || "summary";
-  const target_language = options?.target_language || "";
+  const target_language = options?.target_language || null;
   const api_token = options?.api_token || "";
 
   try {
@@ -93,7 +93,9 @@ export async function summarizeContent({
       summary_type: settings.summary_type || "summary",
     };
 
-    requestParams.target_language = settings.target_language || "";
+    if (settings.target_language) {
+      requestParams.target_language = settings.target_language;
+    }
 
     if (useApi) {
       if (settings.engine) {
@@ -130,8 +132,6 @@ export async function summarizeContent({
 
     if (response.status === 200) {
       const result = await response.json();
-
-      console.debug('summarize response', result);
 
       if (useApi) {
         if (result.data?.output) {
