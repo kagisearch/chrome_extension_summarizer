@@ -151,7 +151,16 @@ export async function summarizeContent({
       if (response.status === 401) {
         summary = 'Invalid Token! Please set a new one.';
       } else {
-        summary = `Error: ${response.status} - ${response.statusText}`;
+        if (!response.statusText && response.headers.get('Content-Type') == 'application/json') {
+          const result = await response.json();
+
+          if (result.error && result.error.length != 0) {
+            const error = result.error[0];
+            summary = `Error: ${error.code} - ${error.msg}`;
+          }
+        } else {
+          summary = `Error: ${response.status} - ${response.statusText}`;
+        }
       }
     }
   } catch (error) {
