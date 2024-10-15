@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Kagi Summarizer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Summarize pages with Kagi Summarizer",
   "background": {
     "service_worker": "service_worker.js",
